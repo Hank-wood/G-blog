@@ -1,0 +1,12 @@
+<!-- The user view -->
+<section data-ng-controller="UsersController" data-ng-init="findOne()">
+	<h1 data-ng-bind="user.username"></h1>
+	<!-- Show the editing buttons to the user creator -->
+	<small>
+		<em>Posted on</em>
+		<em data-ng-bind="user._id"></em>
+		<em>by</em>
+		<em data-ng-bind="user.email"></em>
+	</small>
+	<p data-ng-bind="user.password"></p>
+</section>

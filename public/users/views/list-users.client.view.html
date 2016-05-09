@@ -1,0 +1,19 @@
+<!-- The list users view -->
+<section data-ng-controller="UsersController" data-ng-init="find()">
+    <h1>Users</h1>
+    <ul>
+        <!-- The list of user -->
+        <li data-ng-repeat="user in users">
+            <p data-ng-bind="user.username"></p>
+            <br>
+            <small data-ng-bind="user.created | date:'medium'"></small>
+            <small>/</small>
+            <small data-ng-bind="user._id"></small>
+            <p data-ng-bind="user.email"></p>
+        </li>
+    </ul>
+    <!-- If there are no users in the list, suggest the user's create a new user -->
+    <div data-ng-hide="!users || users.length">
+        No users yet, why don't you <a href="/#!/users/create">create one</a>?
+    </div>
+</section>

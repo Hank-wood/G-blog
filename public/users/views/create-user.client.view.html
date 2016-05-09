@@ -1,0 +1,56 @@
+<!-- The create user view -->
+<section data-ng-controller="UsersController">
+    <h1>New User</h1>ø
+    <!-- The new user form -->
+    <form data-ng-submit="create()" novalidate>
+        <div>
+            <label for="email">email</label>
+            <div>
+                <input type="email" data-ng-model="email" id="email" placeholder="email" required>
+            </div>
+        </div>
+        <div>
+            <label for="qq">qq</label>
+            <div>
+                <input type="text" data-ng-model="qq" id="qq" placeholder="qq" required>
+            </div>
+        </div>
+        <div>
+            <label for="wechat">wechat</label>
+            <div>
+                <input type="text" data-ng-model="wechat" id="wechat" placeholder="wechat" required>
+            </div>
+        </div>
+        <div>
+            <label for="phone">phone</label>
+            <div>
+                <input type="text" data-ng-model="phone" id="phone" placeholder="phone" required>
+            </div>
+        </div>
+        <div>
+            <label for="username">username</label>
+            <div>
+                <input type="text" data-ng-model="username" id="username" placeholder="username" required>
+            </div>
+        </div>
+        <div>
+            <label for="password">password</label>
+            <div>
+                <input type="password" data-ng-model="password" id="password" placeholder="password" required>
+            </div>
+        </div>
+        <!-- 		<div>
+			<label for="content">Content</label>
+			<div>
+				<textarea data-ng-model="content" id="content" cols="30" rows="10" placeholder="Content"></textarea>
+			</div>
+		</div> -->
+        <div>
+            <input type="submit">
+        </div>
+        <!-- The error message element -->
+        <div data-ng-show="error">
+            <strong data-ng-bind="error"></strong>
+        </div>
+    </form>
+</section>
